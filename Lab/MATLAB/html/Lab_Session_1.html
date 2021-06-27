@@ -1,0 +1,265 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Pratik Ravikumar Sanghavi (2017AAPS0394G)</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-08-23"><meta name="DC.source" content="Lab_Session_1.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Pratik Ravikumar Sanghavi (2017AAPS0394G)</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Problem Statement 1: Generation of waveforms for square wave and the sawtooth wave</a></li><li><a href="#2">Program Initialization</a></li><li><a href="#3">Square Wave with 60% duty cycle</a></li><li><a href="#4">Variable initialization</a></li><li><a href="#5">Square Wave with 30% duty cycle</a></li><li><a href="#6">Variable initialization</a></li><li><a href="#7">Sawtooth Function with a ramp characteristic</a></li><li><a href="#8">Variable Initialization</a></li><li><a href="#9">Sawtooth wave with a triangular characteristic</a></li><li><a href="#10">Variable initialization</a></li><li><a href="#11">Plot Generation</a></li><li><a href="#12">Problem Statement 2:Sampling of sinusoidal waveform</a></li><li><a href="#13">Program Initialization</a></li><li><a href="#14">Cosine Wave of 3Hz</a></li><li><a href="#15">Variable Declaration</a></li><li><a href="#16">Cosine Wave of 7Hz</a></li><li><a href="#17">Variable Declaration</a></li><li><a href="#18">Plot Generation</a></li><li><a href="#19">Verification of sequences</a></li></ul></div><h2 id="1">Problem Statement 1: Generation of waveforms for square wave and the sawtooth wave</h2><h2 id="2">Program Initialization</h2><pre class="codeinput">clc;
+clear <span class="string">all</span>;
+close <span class="string">all</span>;
+</pre><h2 id="3">Square Wave with 60% duty cycle</h2><h2 id="4">Variable initialization</h2><pre class="codeinput">t=linspace(0,6*pi,31);
+y1=2.5.*square(t,60);
+</pre><h2 id="5">Square Wave with 30% duty cycle</h2><h2 id="6">Variable initialization</h2><pre class="codeinput">y2=2.5.*square(t,30);
+</pre><h2 id="7">Sawtooth Function with a ramp characteristic</h2><h2 id="8">Variable Initialization</h2><pre class="codeinput">t1=linspace(0,5*pi,51);
+y3=2.*sawtooth(t1);
+</pre><h2 id="9">Sawtooth wave with a triangular characteristic</h2><h2 id="10">Variable initialization</h2><pre class="codeinput">t2=linspace(0,5*pi,50);
+y4=2.*sawtooth(t2,1/2);
+</pre><h2 id="11">Plot Generation</h2><pre class="codeinput">figure(1);
+subplot(2,2,1);
+stem(5*t/pi,y1);
+title(<span class="string">'Square Wave with 60% duty cycle'</span>);
+xlabel(<span class="string">'Time index n'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+grid <span class="string">on</span>;
+
+subplot(2,2,2);
+stem(5*t/pi,y2);
+title(<span class="string">'Square Wave with 30% duty cycle'</span>);
+xlabel(<span class="string">'Time index n'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+grid <span class="string">on</span>;
+
+subplot(2,2,3)
+stem(10*t1/pi,y3);
+title(<span class="string">'Sawtooth Wave (a)'</span>);
+xlabel(<span class="string">'Time index n'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+axis([0 50 -2 2]);
+grid <span class="string">on</span>;
+
+subplot(2,2,4)
+stem(10*t2/pi,y4);
+title(<span class="string">'Sawtooth Wave (b)'</span>);
+xlabel(<span class="string">'Time index n'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+axis([0 50 -2 2]);
+grid <span class="string">on</span>;
+</pre><img vspace="5" hspace="5" src="Lab_Session_1_01.png" alt=""> <h2 id="12">Problem Statement 2:Sampling of sinusoidal waveform</h2><h2 id="13">Program Initialization</h2><pre class="codeinput">clc;
+close <span class="string">all</span>;
+</pre><h2 id="14">Cosine Wave of 3Hz</h2><h2 id="15">Variable Declaration</h2><pre class="codeinput">fsig1=3;
+tsig=0:1e-3:1-1e-3;
+y5=cos(2*pi*fsig1*tsig);
+n=0:9;
+Ts=0.1;
+ysamp5=cos(2*pi*fsig1*n*Ts);
+</pre><h2 id="16">Cosine Wave of 7Hz</h2><h2 id="17">Variable Declaration</h2><pre class="codeinput">fsig2=7;
+y6=cos(2*pi*fsig2*tsig);
+n=0:9;
+Ts=0.1;
+ysamp6=cos(2*pi*fsig2*n*Ts);
+</pre><h2 id="18">Plot Generation</h2><pre class="codeinput">figure(2);
+plot(tsig,y5,<span class="string">'b-'</span>);
+hold <span class="string">on</span>
+stem(n*Ts,ysamp5,<span class="string">'r--o'</span>);
+title(<span class="string">'Sampled Signal 1'</span>);
+xlabel(<span class="string">'Time index n'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+legend(<span class="string">'Cosine signal of 3Hz'</span>,<span class="string">'Cosine signal sampled at 10samples/s'</span>);
+
+figure(3);
+plot(tsig,y6,<span class="string">'b-'</span>);
+hold <span class="string">on</span>
+stem(n*Ts,ysamp6,<span class="string">'r--o'</span>);
+title(<span class="string">'Sampled Signal 2'</span>);
+xlabel(<span class="string">'Time index n'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+legend(<span class="string">'Cosine signal of 7Hz'</span>,<span class="string">'Cosine signal sampled at 10samples/s'</span>);
+</pre><img vspace="5" hspace="5" src="Lab_Session_1_02.png" alt=""> <img vspace="5" hspace="5" src="Lab_Session_1_03.png" alt=""> <h2 id="19">Verification of sequences</h2><pre class="codeinput">disp(ysamp5);
+disp(ysamp6);
+error=abs(ysamp5-ysamp6);
+<span class="keyword">if</span> error&lt;1e-7
+    fprintf(<span class="string">'The sequences generated by sampling a 3Hz and 7Hz at 10samples/s are equal and agree with theoretical predictions\n'</span>);
+<span class="keyword">else</span>
+    fprintf(<span class="string">'Error in sequence generation\n'</span>);
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">  Columns 1 through 7
+
+    1.0000   -0.3090   -0.8090    0.8090    0.3090   -1.0000    0.3090
+
+  Columns 8 through 10
+
+    0.8090   -0.8090   -0.3090
+
+  Columns 1 through 7
+
+    1.0000   -0.3090   -0.8090    0.8090    0.3090   -1.0000    0.3090
+
+  Columns 8 through 10
+
+    0.8090   -0.8090   -0.3090
+
+The sequences generated by sampling a 3Hz and 7Hz at 10samples/s are equal and agree with theoretical predictions
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Pratik Ravikumar Sanghavi (2017AAPS0394G)
+%% Problem Statement 1: Generation of waveforms for square wave and the sawtooth wave
+%% Program Initialization
+clc;
+clear all;
+close all;
+%% Square Wave with 60% duty cycle
+%% Variable initialization
+t=linspace(0,6*pi,31);
+y1=2.5.*square(t,60);
+%% Square Wave with 30% duty cycle
+%% Variable initialization
+y2=2.5.*square(t,30);
+%% Sawtooth Function with a ramp characteristic
+%% Variable Initialization 
+t1=linspace(0,5*pi,51);
+y3=2.*sawtooth(t1);
+%% Sawtooth wave with a triangular characteristic
+%% Variable initialization
+t2=linspace(0,5*pi,50);
+y4=2.*sawtooth(t2,1/2);
+%% Plot Generation
+figure(1);
+subplot(2,2,1);
+stem(5*t/pi,y1);
+title('Square Wave with 60% duty cycle');
+xlabel('Time index n');
+ylabel('Amplitude');
+grid on;
+
+subplot(2,2,2);
+stem(5*t/pi,y2);
+title('Square Wave with 30% duty cycle');
+xlabel('Time index n');
+ylabel('Amplitude');
+grid on;
+
+subplot(2,2,3)
+stem(10*t1/pi,y3);
+title('Sawtooth Wave (a)');
+xlabel('Time index n');
+ylabel('Amplitude');
+axis([0 50 -2 2]);
+grid on;
+
+subplot(2,2,4)
+stem(10*t2/pi,y4);
+title('Sawtooth Wave (b)');
+xlabel('Time index n');
+ylabel('Amplitude');
+axis([0 50 -2 2]);
+grid on;
+%% Problem Statement 2:Sampling of sinusoidal waveform
+%% Program Initialization
+clc;
+close all;
+%% Cosine Wave of 3Hz
+%% Variable Declaration
+fsig1=3;
+tsig=0:1e-3:1-1e-3;
+y5=cos(2*pi*fsig1*tsig);
+n=0:9;
+Ts=0.1;
+ysamp5=cos(2*pi*fsig1*n*Ts);
+%% Cosine Wave of 7Hz
+%% Variable Declaration
+fsig2=7;
+y6=cos(2*pi*fsig2*tsig);
+n=0:9;
+Ts=0.1;
+ysamp6=cos(2*pi*fsig2*n*Ts);
+%% Plot Generation
+figure(2);
+plot(tsig,y5,'b-');
+hold on
+stem(n*Ts,ysamp5,'rREPLACE_WITH_DASH_DASHo');
+title('Sampled Signal 1');
+xlabel('Time index n');
+ylabel('Amplitude');
+legend('Cosine signal of 3Hz','Cosine signal sampled at 10samples/s');
+
+figure(3);
+plot(tsig,y6,'b-');
+hold on
+stem(n*Ts,ysamp6,'rREPLACE_WITH_DASH_DASHo');
+title('Sampled Signal 2');
+xlabel('Time index n');
+ylabel('Amplitude');
+legend('Cosine signal of 7Hz','Cosine signal sampled at 10samples/s');
+%% Verification of sequences
+disp(ysamp5);
+disp(ysamp6);
+error=abs(ysamp5-ysamp6);
+if error<1e-7
+    fprintf('The sequences generated by sampling a 3Hz and 7Hz at 10samples/s are equal and agree with theoretical predictions\n');
+else
+    fprintf('Error in sequence generation\n');
+end
+##### SOURCE END #####
+--></body></html>

@@ -1,0 +1,11 @@
+fft(x,N)
+ifft(X)
+dftmtx(dim)=>DFT matrix of dimension dim
+conj(dftmtx(dim))/dim=>IDFT matrix of dimension dim
+conv(x1,x2)
+cconv(x1,x2)=>circular convolution
+Say length(x1)=N1
+    length(x2)=N2
+and
+cconv(x1,x2,N1+N2-1)=>same result as conv(x1,x2)
+  

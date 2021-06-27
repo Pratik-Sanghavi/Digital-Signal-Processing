@@ -1,0 +1,234 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Pratik Ravikumar Sanghavi(2017AAPS0394G)</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-09-12"><meta name="DC.source" content="L3_2017AAPS0394G.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Pratik Ravikumar Sanghavi(2017AAPS0394G)</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">EXPERIMENT-1</a></li><li><a href="#2">Initialization</a></li><li><a href="#3">Variables</a></li><li><a href="#4">Signal Generation and FFT Computation</a></li><li><a href="#5">EXPERIMENT 2</a></li><li><a href="#6">Initialisation</a></li><li><a href="#7">Signal Generation</a></li><li><a href="#8">Power Spectral Density</a></li><li><a href="#9">Plot Generation</a></li></ul></div><h2 id="1">EXPERIMENT-1</h2><h2 id="2">Initialization</h2><pre class="codeinput">clc;
+clear;
+close <span class="string">all</span>;
+</pre><h2 id="3">Variables</h2><pre class="codeinput">fc=100;
+fs=32*fc;
+t=0:1/fs:2-1/fs;
+</pre><h2 id="4">Signal Generation and FFT Computation</h2><pre class="codeinput">m=8*cos(2*pi*10*t + pi/2) + 6*cos(2*pi*40*t -2* pi/3) +7* cos(2*pi*100*t + pi/6);
+N=6400;
+X = fft(m,N);
+X2=X(1:N/2)/(N/2);
+df=fs/N;
+sampleIndex = 0:N/2-1;
+f=sampleIndex*df;
+
+angle_x = angle(X2);
+tolerance = 0.00001;
+X3 = ceil(abs(X2) -tolerance);
+X4 = round (X3 ./(X3+1));  <span class="comment">%(X4 is the vector of 0s and 1s)</span>
+Angle_p = angle(X2).*X4;
+Angle_deg = Angle_p*180/pi;
+
+Px=X2.*conj(X2)/2; <span class="comment">%Power of each freq components</span>
+
+figure(1)
+subplot(2,2,1)
+plot(t,m);
+xlabel(<span class="string">'Time'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+title(<span class="string">'Signal'</span>);
+grid <span class="string">on</span>;
+
+subplot(2,2,2);
+stem(f,abs(X2));
+title(<span class="string">'Amplitude Spectrum'</span>);
+axis([0 120 0 10]);
+xlabel(<span class="string">'frequency (f)'</span>);
+ylabel(<span class="string">'|X(f)|'</span>);
+
+subplot(2,2,3);
+stem(f,Angle_deg,<span class="string">'r'</span>)
+title(<span class="string">'Phase angle plot'</span>);
+axis([0 120 -120 100]);
+xlabel(<span class="string">'frequencies (f)'</span>);
+ylabel(<span class="string">'Phase angle'</span>);
+
+subplot(2,2,4);
+stem(f,Px,<span class="string">'b'</span>);
+title(<span class="string">'Power Spectral Density'</span>);
+xlabel(<span class="string">'frequencies (Hz)'</span>);
+ylabel(<span class="string">'Power'</span>);
+axis([0 120 0 35]);
+</pre><img vspace="5" hspace="5" src="L3_2017AAPS0394G_01.png" alt=""> <h2 id="5">EXPERIMENT 2</h2><h2 id="6">Initialisation</h2><pre class="codeinput">close <span class="string">all</span>
+</pre><h2 id="7">Signal Generation</h2><pre class="codeinput">fc=25;
+fs=32*fc;
+t=0:1/fs:1-1/fs;
+x=square(2*pi*fc*t,50);
+</pre><h2 id="8">Power Spectral Density</h2><pre class="codeinput">N=1600;
+X = fft(x,N);
+X2=X(1:N/2)/(N/2);
+df=fs/N;
+sampleIndex = 0:N/2-1;
+f=sampleIndex*df;
+Px=X2.*conj(X2)/2;
+</pre><h2 id="9">Plot Generation</h2><pre class="codeinput">figure(2)
+subplot(121)
+plot(t,x);
+xlabel(<span class="string">'Time'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+title(<span class="string">'Signal'</span>);
+grid <span class="string">on</span>;
+
+subplot(122)
+stem(f,Px,<span class="string">'b'</span>);
+title(<span class="string">'Power Spectral Density'</span>);
+xlabel(<span class="string">'frequencies (Hz)'</span>);
+ylabel(<span class="string">'Power'</span>);
+</pre><img vspace="5" hspace="5" src="L3_2017AAPS0394G_02.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Pratik Ravikumar Sanghavi(2017AAPS0394G)
+%% EXPERIMENT-1
+%% Initialization
+clc;
+clear;
+close all;
+%% Variables
+fc=100;
+fs=32*fc;
+t=0:1/fs:2-1/fs;
+%% Signal Generation and FFT Computation
+m=8*cos(2*pi*10*t + pi/2) + 6*cos(2*pi*40*t -2* pi/3) +7* cos(2*pi*100*t + pi/6);
+N=6400;  
+X = fft(m,N);
+X2=X(1:N/2)/(N/2);
+df=fs/N;
+sampleIndex = 0:N/2-1;
+f=sampleIndex*df;
+
+angle_x = angle(X2);
+tolerance = 0.00001;
+X3 = ceil(abs(X2) -tolerance);
+X4 = round (X3 ./(X3+1));  %(X4 is the vector of 0s and 1s)
+Angle_p = angle(X2).*X4;
+Angle_deg = Angle_p*180/pi;
+
+Px=X2.*conj(X2)/2; %Power of each freq components  
+
+figure(1)
+subplot(2,2,1)
+plot(t,m);
+xlabel('Time');
+ylabel('Amplitude');
+title('Signal');
+grid on;
+
+subplot(2,2,2);
+stem(f,abs(X2));
+title('Amplitude Spectrum');
+axis([0 120 0 10]);
+xlabel('frequency (f)');
+ylabel('|X(f)|');
+
+subplot(2,2,3);
+stem(f,Angle_deg,'r')
+title('Phase angle plot');
+axis([0 120 -120 100]);
+xlabel('frequencies (f)');
+ylabel('Phase angle');
+
+subplot(2,2,4);
+stem(f,Px,'b');
+title('Power Spectral Density');
+xlabel('frequencies (Hz)');
+ylabel('Power');
+axis([0 120 0 35]);
+%% EXPERIMENT 2
+%% Initialisation
+close all
+%% Signal Generation
+fc=25;
+fs=32*fc;
+t=0:1/fs:1-1/fs;
+x=square(2*pi*fc*t,50);
+%% Power Spectral Density
+N=1600;
+X = fft(x,N);
+X2=X(1:N/2)/(N/2);
+df=fs/N;
+sampleIndex = 0:N/2-1;
+f=sampleIndex*df;
+Px=X2.*conj(X2)/2;
+%% Plot Generation
+figure(2)
+subplot(121)
+plot(t,x);
+xlabel('Time');
+ylabel('Amplitude');
+title('Signal');
+grid on;
+
+subplot(122)
+stem(f,Px,'b');
+title('Power Spectral Density');
+xlabel('frequencies (Hz)');
+ylabel('Power');
+##### SOURCE END #####
+--></body></html>
